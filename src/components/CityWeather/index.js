@@ -11,12 +11,12 @@ import { Button, Form ,Container} from 'react-bootstrap';
             <Container>
                 <div>
                 <h3>City Name:{cityWeather.name}</h3>
-                    <h3>Weather:{weather.description}</h3>
+                    <h3 style={{textTransform:"capitalize"}}>Weather:{weather.description}</h3>
                 </div>
                 <div>
-                    <h3>Temperature:{main.temp}</h3>
-                    <h4>Humidity:{main.humidity}</h4>
-                    <h4>Sea Level:{main.sea_level}</h4>
+                    <h3>Temperature:{main.temp.toFixed(2)+" K "}, {(main.temp-273.15).toFixed(2) +" C "}</h3>
+                    <h3>Humidity:{main.humidity}</h3>
+                    <h3>Sea Level:{!main.sea_level?"Information Not Available":main.sea_level.toFixed(2)}</h3>
                 </div>
             </Container>
         </>

@@ -10,7 +10,7 @@ function App() {
   const fetchCityWeather=()=>{
     setCityWeather([]);
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d5d4a075adc7f5322bb6ae9ec6c87c67`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d5d4a075adc7f5322bb6ae9ec6c87c67`
       ).then((response)=>response.json()
       .then((result)=>{
            if(result.cod===200)
